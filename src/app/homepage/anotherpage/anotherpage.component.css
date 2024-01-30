@@ -94,7 +94,7 @@ background: linear-gradient(to bottom right, blue, black); /* Standard syntax */
 
 h2 {
     font-family: 'Dancing Script', cursive;
-    font-size: medium;
+    font-size: small;
     font-weight: bold;
     text-shadow: 2px 2px 2px silver;
 }
