@@ -1,0 +1,31 @@
+<div class="navbar">
+  <div class="logo">
+    <img src="../../assets/images/logo.png" alt="Brand Logo" />
+  </div>
+  <div class="navbar-links">
+    <a routerLink="/" class="active">Home</a>
+    <a routerLink="/previousHospitalBookings">Previous Hospital Bookings</a>
+    <a routerLink="/updateHospitalDetails">Update Hospital Details</a>
+  </div>
+  <div class="logout">
+    <button (click)="logout()" class="btn btn-danger">Logout</button>
+  </div>
+
+</div>
+    <div class="body-section">
+      </div>
+      <div class="cards">
+        <div class="card" (click)="navigateToPreviousBookings()">
+          <img src="../../../assets/images/booking_history.png" alt="Previous Bookings">
+          <div class="card-text">Previous Bookings</div>
+        </div>
+        <div class="card" (click)="navigateToUpdateDetails()">
+          <img src="https://img.freepik.com/premium-vector/software-update-illustration_108061-429.jpg?w=2000" alt="Update Details">
+          <div class="card-text">Update Details</div>
+        </div>
+      </div>
+    <footer class="footer">
+      <p>&copy; 2023 Hospital Booking System. All rights reserved.</p>
+    </footer>
+
+  

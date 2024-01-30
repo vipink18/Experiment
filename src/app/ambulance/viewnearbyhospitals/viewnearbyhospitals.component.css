@@ -1,0 +1,92 @@
+/* hospital-list.component.css */
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.logo {
+  float: left;
+  padding: 10px 16px;
+}
+
+.logo img {
+  width: 40px;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  max-height: 40px;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Location Dropdown */
+  #location {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Table Header */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  /* Flex Container for Dropdown and Table */
+  .flex-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Flex Item for Dropdown */
+  .flex-item {
+    flex: 1;
+  }
+  

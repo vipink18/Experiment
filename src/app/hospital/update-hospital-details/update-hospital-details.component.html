@@ -1,0 +1,33 @@
+<div class="body">
+  <div class="navbar">
+    <div class="logo">
+      <img src="../../assets/images/logo.png" alt="Brand Logo" />
+    </div>
+    <div class="navbar-links">
+      <a routerLink="/hospital-dash" class="active">Back to Dashboard</a>
+    </div>
+  </div>
+
+<div class="container col-md-6">
+    <h2>Update Hospital Details</h2>
+    <form (ngSubmit)="updateHospitalDetails()">
+      <div class="form-group">
+        <label for="hospitalName">Hospital Name:</label>
+        <input type="text" id="hospitalName" [(ngModel)]="hospitalName" name="hospitalName" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="hospitalContactNumber">Hospital Contact Number:</label>
+        <input type="tel" id="hospitalContactNumber" [(ngModel)]="hospitalContactNumber" name="hospitalContactNumber" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="hospitalAddress">Hospital Address:</label>
+        <input type="text" id="hospitalAddress" [(ngModel)]="hospitalAddress" name="hospitalAddress" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="hospitalLocation">Hospital Location:</label>
+        <input type="text" id="hospitalLocation" [(ngModel)]="hospitalLocation" name="hospitalLocation" class="form-control" required>
+      </div>      
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div>
+  </div>

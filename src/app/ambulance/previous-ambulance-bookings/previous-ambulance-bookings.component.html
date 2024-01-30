@@ -1,0 +1,51 @@
+<div class="navbar">
+  <div class="logo">
+    <img src="../../assets/images/logo.png" alt="Brand Logo" />
+  </div>
+  <div class="navbar-links">
+    <a routerLink="/ambulance-dash" class="active">Back to Dashboard</a>
+  </div>
+</div>
+<div class="card-container">
+  <div *ngFor="let booking of bookings" class="booking-card">
+    <div class="card-header">Previous Booking</div>
+    <div class="card-content">
+      <div class="key-value">
+        <div class="key">Booking Time:</div>
+        <div class="value">{{ booking.bookingTime | date }}</div>
+      </div>
+      <div class="key-value">
+        <div class="key">User:</div>
+        <div class="value">{{ booking.user.userName }}</div>
+      </div>
+      <div class="key-value">
+        <div class="key">User Contact:</div>
+        <div class="value">{{ booking.user.userContactNumber }}</div>
+      </div>
+      <div class="key-value">
+        <div class="key">User Email:</div>
+        <div class="value">{{ booking.user.userEmailId }}</div>
+      </div>
+      <div class="key-value">
+        <div class="key">User Location:</div>
+        <div class="value">{{ booking.user.userLocation }}</div>
+      </div>
+      <div class="key-value">
+        <div class="key">Hospital:</div>
+        <div class="value">{{ booking.hospital.hospitalName }}</div>
+      </div>
+      <div class="key-value">
+        <div class="key">Hospital Contact:</div>
+        <div class="value">{{ booking.hospital.hospitalContactNumber }}</div>
+      </div>
+      <div class="key-value">
+        <div class="key">Hospital Address:</div>
+        <div class="value">{{ booking.hospital.hospitalAddress }}</div>
+      </div>
+      <div class="key-value">
+        <div class="key">Hospital Email:</div>
+        <div class="value">{{ booking.hospital.hospitalEmailId }}</div>
+      </div>
+    </div>
+  </div>
+</div>

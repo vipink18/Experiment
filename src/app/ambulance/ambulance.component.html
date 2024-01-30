@@ -1,0 +1,26 @@
+<div class="main-div container col-md-20">
+  <table class="table table table-striped">
+    <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Ambulance Driver Name</th>
+            <th scope="col">Ambulance Driver Email Id</th>
+            <th scope="col">Ambulance Driver Contact No.</th>
+            <th scope="col">Ambulance Driver Location</th>
+            <th scope="col">Ambulance Status</th>
+            <th scope="col">Ambulance Type</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr *ngFor="let post of posts; let i = index">
+            <td scope="col">{{i+1}}</td>
+            <td>{{post.ambDriverName}}</td>
+            <td>{{post.ambDriverEmailId}}</td>
+            <td>{{post.ambDriverContactNumber}}</td>
+            <td>{{post.ambDriverLocation}}</td>
+            <td>{{post.ambStatus}}</td>
+            <td>{{post.ambType}}</td>
+          </tr>
+        </tbody>
+  </table>
+</div>

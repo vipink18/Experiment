@@ -1,0 +1,16 @@
+<div class="payment-container">
+    <div class="payment-box">
+      <div class="user-details">
+        <h2>User Details</h2>
+        <p><strong>Name:</strong> {{ userDetails.userName }}</p>
+        <p><strong>Contact Number:</strong> {{ userDetails.userContactNumber }}</p>
+        <p><strong>Email:</strong> {{ userDetails.userEmailId }}</p>
+      </div>
+      <div class="amount">
+        <h2>Amount</h2>
+        <p><strong>Rs.{{ amount }}</strong></p>
+      </div>
+      <button class="payment-button" (click)="makePayment()">Make Payment</button>
+    </div>
+  </div>
+  

@@ -1,0 +1,93 @@
+<!-- <div>
+    <h2>User Booking History</h2>
+    <table class="booking-table">
+      <thead>
+        <tr>
+          <th>Booking Time</th>
+          <th>Ambulance Driver Name</th>
+          <th>Ambulance Driver Email</th>
+          <th>Ambulance Contact Number</th>
+          <th>Ambulance Location</th>
+          <th>Ambulance Type</th>
+          <th>Hospital Name</th>
+          <th>Hospital Contact</th>
+          <th>Hospital Address</th>
+          <th>Hospital EmailId</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookingHistory">
+          <td>{{ booking.bookingTime | date }}</td>
+          <td>{{ booking.ambulance.ambDriverName }}</td>
+          <td>{{ booking.ambulance.ambDriverEmailId }}</td>
+          <td>{{ booking.ambulance.ambDriverContactNumber }}</td>
+          <td>{{ booking.ambulance.ambDriverLocation }}</td>
+          <td>{{ booking.ambulance.ambType }}</td>
+          <td>{{ booking.hospital.hospitalName }}</td>
+          <td>{{ booking.hospital.hospitalContactNumber }}</td>
+          <td>{{ booking.hospital.hospitalAddress }}</td>
+          <td>{{ booking.hospital.hospitalEmailId }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+   -->
+
+   <div class="navbar">
+    <div class="logo">
+      <img src="../../assets/images/logo.png" alt="Brand Logo" />
+    </div>
+    <div class="navbar-links">
+      <a routerLink="/user-dash" class="active">Back to Dashboard</a>
+    </div>
+  </div>
+  
+   <div class="card-container">
+    <div *ngFor="let booking of bookings" class="booking-card">
+      <div class="card-header">
+        Previous User Booking
+      </div>
+      <div class="card-content">
+        <div class="key-value">
+          <div class="key">Booking Time:</div>
+          <div class="value">{{ booking.bookingTime | date }}</div>
+        </div>
+        <div class="key-value">
+          <div class="key">Hospital Name:</div>
+          <div class="value">{{ booking.hospital.hospitalName }}</div>
+        </div>
+        <div class="key-value">
+          <div class="key">Hospital Contact:</div>
+          <div class="value">{{ booking.hospital.hospitalContactNumber }}</div>
+        </div>
+        <div class="key-value">
+          <div class="key">Hospital Email:</div>
+          <div class="value">{{ booking.hospital.hospitalEmailId }}</div>
+        </div>
+        <div class="key-value">
+          <div class="key">Hospital Address:</div>
+          <div class="value">{{ booking.hospital.hospitalAddress }}</div>
+        </div>
+        <div class="key-value">
+          <div class="key">Ambulance Driver Name:</div>
+          <div class="value">{{ booking.ambulance.ambDriverName }}</div>
+        </div>
+        <div class="key-value">
+          <div class="key">Ambulance Contact:</div>
+          <div class="value">{{ booking.ambulance.ambDriverContactNumber }}</div>
+        </div>
+        <div class="key-value">
+          <div class="key">Ambulance Location:</div>
+          <div class="value">{{ booking.ambulance.ambDriverLocation }}</div>
+        </div>
+        <div class="key-value">
+          <div class="key">Ambulance Driver Email:</div>
+          <div class="value">{{ booking.ambulance.ambDriverEmailId }}</div>
+        </div>
+        <div class="key-value">
+          <div class="key">Ambulance Type:</div>
+          <div class="value">{{ booking.ambulance.ambType }}</div>
+        </div>
+      </div>
+    </div>
+  </div>

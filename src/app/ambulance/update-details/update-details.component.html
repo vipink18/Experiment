@@ -1,0 +1,80 @@
+<div class="navbar">
+  <div class="logo">
+    <img src="../../assets/images/logo.png" alt="Brand Logo" />
+  </div>
+  <div class="navbar-links">
+    <a routerLink="/ambulance-dash" class="active">Back to Dashboard</a>
+  </div>
+</div>
+
+<div class="container col-md-6">
+    <h2>Update Ambulance Driver Details</h2>
+    <form (ngSubmit)="updateDriverDetails()">
+      <div class="form-group">
+        <label for="ambDriverName">Ambulance Driver Name:</label>
+        <input type="text" id="ambDriverName" [(ngModel)]="ambDriverName" name="ambDriverName" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="ambDriverContactNumber">Ambulance Driver Contact Number:</label>
+        <input type="tel" id="ambDriverContactNumber" [(ngModel)]="ambDriverContactNumber" name="ambDriverContactNumber" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="ambDriverLocation">Ambulance Driver Location:</label>
+        <input type="text" id="ambDriverLocation" [(ngModel)]="ambDriverLocation" name="ambDriverLocation" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="ambStatus">Ambulance Driver Status:</label>
+        <input type="text" id="ambStatus" [(ngModel)]="ambStatus" name="ambStatus" class="form-control" required>
+      </div>      
+      <div class="form-group">
+        <label for="ambType">Ambulance Type:</label>
+        <input type="text" id="ambType" [(ngModel)]="ambType" name="ambType" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div>
+  
+
+   <!-- <div class="container col-md-6 login-container">
+    <h2>Update Ambulance Driver Details</h2>
+    <form (ngSubmit)="updateDriverDetails()">
+      <div class="form-group">
+        <label for="ambDriverName">Ambulance Driver Name:</label>
+        <input type="text" id="ambDriverName" [(ngModel)]="ambDriverName" name="ambDriverName" class="form-control" required>
+        <div *ngIf="ambulanceForm.get('ambDriverName')?.dirty && ambulanceForm.get('ambDriverName')?.hasError('required')" class="error-message">Driver name is required.</div>
+      </div>
+      <div class="form-group">
+        <label for="ambDriverContactNumber">Ambulance Driver Contact Number:</label>
+        <input type="tel" id="ambDriverContactNumber" [(ngModel)]="ambDriverContactNumber" name="ambDriverContactNumber" class="form-control" required pattern="^[0-9]{10}$">
+        <div *ngIf="ambulanceForm.get('ambDriverContactNumber')?.dirty && ambulanceForm.get('ambDriverContactNumber')?.hasError('required')" class="error-message">Driver contact number is required.</div>
+        <div *ngIf="ambulanceForm.get('ambDriverContactNumber')?.dirty && ambulanceForm.get('ambDriverContactNumber')?.hasError('pattern')" class="error-message">Enter a valid 10-digit number.</div>
+      </div>
+      <div class="form-group">
+        <label for="ambDriverLocation">Ambulance Driver Location:</label>
+        <input type="text" id="ambDriverLocation" [(ngModel)]="ambDriverLocation" name="ambDriverLocation" class="form-control" required>
+        <div *ngIf="ambulanceForm.get('ambDriverLocation')?.dirty && ambulanceForm.get('ambDriverLocation')?.hasError('required')" class="error-message">Driver location is required.</div>
+      </div>
+      <div class="form-group">
+        <label for="ambStatus">Ambulance Driver Status:</label>
+        <select id="ambStatus" [(ngModel)]="ambStatus" name="ambStatus" class="form-control" required>
+          <option value="" disabled selected>Select Status</option>
+          <option value="available">Available</option>
+          <option value="unavailable">Unavailable</option>
+        </select>
+        <div *ngIf="ambulanceForm.get('ambStatus')?.dirty && ambulanceForm.get('ambStatus')?.hasError('required')" class="error-message">Status is required.</div>
+      </div>
+      <div class="form-group">
+        <label for="ambType">Ambulance Type:</label>
+        <select id="ambType" [(ngModel)]="ambType" name="ambType" class="form-control" required>
+          <option value="" disabled selected>Select Type</option>
+          <option value="General">General</option>
+          <option value="Cardiac">Cardiac</option>
+          <option value="Life_Support">Life-Support</option>
+          <option value="Express">Express</option>
+        </select>
+        <div *ngIf="ambulanceForm.get('ambType')?.dirty && ambulanceForm.get('ambType')?.hasError('required')" class="error-message">Type is required.</div>
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div> -->
+  

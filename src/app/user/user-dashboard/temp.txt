@@ -1,0 +1,66 @@
+<div class="dashboard-container">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Hospital Booking System Logo">
+        <span class="brandname">User DashBoard</span>
+      </div>
+      <div class="logout">
+        <button class="btn btn-danger" (click)="logout()">Logout</button>
+      </div>
+    </nav>
+    <div class="body-section">
+      <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <!-- Carousel content goes here -->
+      </div>
+      <div class="cards">
+        <div class="card" (click)="navigateToPreviousBookings()">
+          <img src="assets/booking-image.jpg" alt="Previous Bookings">
+          <div class="card-text">Previous Bookings</div>
+        </div>
+        <div class="card" (click)="navigateToUpdateDetails()">
+          <img src="https://img.freepik.com/premium-vector/software-update-illustration_108061-429.jpg?w=2000" alt="Update Details">
+          <div class="card-text">Update Details</div>
+        </div>
+        <div class="card" (click)="navigateToShowUserInfo()">
+          <img src="assets/info-image.jpg" alt="Hospital Info">
+          <div class="card-text">Show User Info</div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2023 Hospital Booking System. All rights reserved.</p>
+    </footer>
+  </div>
+
+  --------------------------------------------------------
+
+  <div class="dashboard-container">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="User Dashboard Logo">
+      <span class="brandname">User Dashboard</span>
+    </div>
+    <div class="logout">
+      <button class="btn btn-danger">Logout</button>
+    </div>
+  </nav>
+  <div class="carousel-container">
+    <!-- Bootstrap carousel content goes here -->
+  </div>
+  <div class="cards">
+    <div class="card" (click)="navigateTo('book-ambulance')">
+      <img src="assets/ambulance-image.jpg" alt="Book Ambulance">
+      <div class="card-text">Book Ambulance</div>
+    </div>
+    <div class="card" (click)="navigateTo('book-hospital')">
+      <img src="assets/hospital-image.jpg" alt="Book Hospital">
+      <div class="card-text">Book Hospital</div>
+    </div>
+    <!-- Repeat similar code for other cards -->
+  </div>
+  <footer class="footer">
+    <p>&copy; 2023 User Dashboard. All rights reserved.</p>
+  </footer>
+</div>
+
+  

@@ -1,0 +1,28 @@
+<div class="main-div container col-md-20">
+  <table class="table table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Hospital Name</th>
+        <th scope="col">Hospital Contact Number</th>
+        <th scope="col">Hospital EmailId</th>
+        <th scope="col">Hospital Address</th>
+        <th scope="col">Hospital Location</th>
+        <th scope="col">Book Hospital</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let hospital of hospitals; let i = index">
+        <td scope="col">{{ i + 1 }}</td>
+        <td>{{ hospital.hospitalName }}</td>
+        <td>{{ hospital.hospitalContactNumber }}</td>
+        <td>{{ hospital.hospitalEmailId }}</td>
+        <td>{{ hospital.hospitalAddress }}</td>
+        <td>{{ hospital.hospitalLocation }}</td>
+        <td>
+          <button type="button" class="btn btn-primary" (click)="bookHospital(hospital.hospitalId)">Book this Hospital</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

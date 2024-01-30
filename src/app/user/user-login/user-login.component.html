@@ -1,0 +1,74 @@
+<!-- <div>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="User Dashboard Logo" />
+    </div>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+    </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="login-container">
+    <h2>User Login</h2>
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="usernameOrEmail">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="loginData.emailId" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="loginData.password" required>
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+      <div>
+        <p>Not Registered Yet?</p>
+        <a routerLink="/userRegister">Register Here</a>
+      </div>
+      <div>
+        <a routerLink="/changeUserPassword">Forgot Password?</a>
+      </div>
+    </form>
+  </div>
+   -->
+   <div class="body">
+   <div class="navbar">
+    <div class="logo">
+      <img src="../../assets/images/logo.png" alt="Brand Logo" />
+    </div>
+    <div class="navbar-links">
+      <a routerLink="/" class="active">Home</a>
+      <a routerLink="/userLogin">User Login</a>
+      <a routerLink="/ambulanceLogin">Ambulance Login</a>
+      <a routerLink="/hospitalLogin">Hospital Login</a>
+    </div>
+  </div>
+  
+  <div class="login-container">
+    <h2>User Login</h2>
+    <form (ngSubmit)="login()" [formGroup]="loginForm">
+      <div class="form-group" [ngClass]="{ 'has-error': isFieldInvalid('emailId') }">
+        <label for="usernameOrEmail">Email:</label>
+        <input type="email" id="emailId" name="emailId" formControlName="emailId">
+        <div class="error-message" *ngIf="isFieldInvalid('emailId')">Invalid email format</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': isFieldInvalid('password') }">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" formControlName="password">
+        <div class="error-message" *ngIf="isFieldInvalid('password')">
+          Password must be at least 8 characters long with one uppercase letter, one lowercase letter, one number, and one special character.
+        </div>
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+      <div>
+        <p>Not Registered Yet?</p>
+        <a routerLink="/userRegister">Register Here</a>
+      </div>
+      <div>
+        <a routerLink="/changeUserPassword">Forgot Password?</a>
+      </div>
+    </form>
+  </div>
+   </div>

@@ -1,0 +1,118 @@
+<!-- <div class="container col-md-6">
+    <h1>Register Ambulance</h1>
+    <form (ngSubmit)="ambulanceRegister()">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Name</label> 
+        <input type="text" [(ngModel)]="ambulance.ambDriverName" id="ambDriverName" name="ambDriverName" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email Id</label>
+        <input type="email" [(ngModel)]="ambulance.ambDriverEmailId" id="ambDriverEmailId" name="ambDriverEmailId" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Contact Number</label>
+        <input type="tel" [(ngModel)]="ambulance.ambDriverContactNumber" id="ambDriverContactNumber" name="ambDriverContactNumber" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Password</label>
+        <input type="password" [(ngModel)]="ambulance.ambDriverPassword" id="ambDriverPassword" name="ambDriverPassword" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Location</label>
+        <input type="text" [(ngModel)]="ambulance.ambDriverLocation" id="ambDriverLocation" name="ambDriverLocation" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Ambulance Status</label>
+        <select class="form-select" [(ngModel)]="ambulance.ambStatus" id="ambStatus" name="ambStatus" aria-label="Default select example">
+          <option selected>Status</option>
+          <option value="Available">Available</option>
+          <option value="Unavailable">Unavailable</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Ambulance Type</label>
+        <select class="form-select" [(ngModel)]="ambulance.ambType" id="ambType" name="ambType" aria-label="Default select example">
+          <option selected>Status</option>
+          <option value="General">General</option>
+          <option value="Cardiac">Cardiac</option>
+          <option value="Life-Support">Life-Support</option>
+          <option value="Express">Express</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+      <div>
+        <p>Already have an account?
+          <a routerLink="/ambulanceLogin">Login</a>
+        </p>
+      </div>
+    </form>
+  </div> -->
+<div class="body">
+  <div class="navbar">
+    <div class="logo">
+      <img src="../../assets/images/logo.png" alt="Brand Logo" />
+    </div>
+    <div class="navbar-links">
+      <a routerLink="/" class="active">Home</a>
+      <a routerLink="/userLogin">User Login</a>
+      <a routerLink="/ambulanceLogin">Ambulance Login</a>
+      <a routerLink="/hospitalLogin">Hospital Login</a>
+    </div>
+  </div>
+  <div class="container col-md-6">
+    <h1>Register Ambulance Driver</h1>
+    <form [formGroup]="registerForm" (ngSubmit)="ambulanceRegister()">
+      <div class="form-group" [ngClass]="{ 'has-error': isFieldInvalid('ambDriverName') }">
+        <label for="ambDriverName">Name</label>
+        <input type="text" formControlName="ambDriverName" class="form-control">
+        <div class="error-message" *ngIf="isFieldInvalid('ambDriverName')">Name is required</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': isFieldInvalid('ambDriverContactNumber') }">
+        <label for="ambDriverContactNumber">Contact Number</label>
+        <input type="tel" formControlName="ambDriverContactNumber" class="form-control">
+        <div class="error-message" *ngIf="isFieldInvalid('ambDriverContactNumber')">Contact number should be exactly 10 digits</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': isFieldInvalid('ambDriverEmailId') }">
+        <label for="ambDriverEmailId">Email</label>
+        <input type="email" formControlName="ambDriverEmailId" class="form-control">
+        <div class="error-message" *ngIf="isFieldInvalid('ambDriverEmailId')">Invalid email format</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': isFieldInvalid('ambDriverLocation') }">
+        <label for="ambDriverLocation">Location</label>
+        <input type="text" formControlName="ambDriverLocation" class="form-control">
+        <div class="error-message" *ngIf="isFieldInvalid('ambDriverLocation')">Location is required</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': isFieldInvalid('ambDriverPassword') }">
+        <label for="ambDriverPassword">Password</label>
+        <input type="password" formControlName="ambDriverPassword" class="form-control">
+        <div class="error-message" *ngIf="isFieldInvalid('ambDriverPassword')">Password must be greater than 8 characters and follow the specified criteria</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': isFieldInvalid('ambStatus') }">
+        <label for="ambStatus">Ambulance Status</label>
+        <select formControlName="ambStatus" class="form-select">
+          <option value="" disabled selected>Select Status</option>
+          <option value="Available">Available</option>
+          <option value="Unavailable">Unavailable</option>
+        </select>
+        <div class="error-message" *ngIf="isFieldInvalid('ambStatus')">Ambulance status is required</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': isFieldInvalid('ambType') }">
+        <label for="ambType">Ambulance Type</label>
+        <select formControlName="ambType" class="form-select">
+          <option value="" disabled selected>Select Type</option>
+          <option value="General">General</option>
+          <option value="Cardiac">Cardiac</option>
+          <option value="Life-Support">Life-Support</option>
+          <option value="Express">Express</option>
+        </select>
+        <div class="error-message" *ngIf="isFieldInvalid('ambType')">Ambulance type is required</div>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid">Register</button>
+      <div>
+        <p>Already have an account?
+          <a routerLink="/ambulanceLogin">Login</a>
+        </p>
+      </div>
+    </form>
+  </div>
+</div>

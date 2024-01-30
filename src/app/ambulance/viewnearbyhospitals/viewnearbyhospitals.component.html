@@ -1,0 +1,40 @@
+<div class="navbar">
+  <div class="logo">
+    <img src="../../assets/images/logo.png" alt="Brand Logo" />
+  </div>
+  <div class="navbar-links">
+    <a routerLink="/ambulance-dash" class="active">Back to Dashboard</a>
+  </div>
+</div>
+
+<div class="main-div container col-md-20">
+    <div>
+        <label for="location">Select Location:</label>
+        <select class="select-style" id="location" [(ngModel)]="selectedLocation" (change)="fetchHospitalData()">
+          <option *ngFor="let location of locations" [value]="location">{{ location }}</option>
+        </select>
+    </div>
+    <table class="table table-striped">
+      <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Hospital Name</th>              
+              <th scope="col">Hospital Contact No.</th>
+              <th scope="col">Hospital Email</th>
+              <th scope="col">Hospital Address</th>
+              <th scope="col">Hospital Location</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr *ngFor="let hospital of hospitals; let i = index">
+              <td scope="col">{{i+1}}</td>
+              <td>{{hospital.hospitalName}}</td>
+              <td>{{hospital.hospitalContactNumber}}</td>
+              <td>{{hospital.hospitalEmailId}}</td>
+              <td>{{hospital.hospitalAddress}}</td>
+              <td>{{hospital.hospitalLocation}}</td>
+             </tr>
+          </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,40 @@
+<div class="navbar">
+  <div class="logo">
+    <img src="../../assets/images/logo.png" alt="Brand Logo" />
+  </div>
+  <div class="navbar-links">
+    <a routerLink="/user-dash" class="active">Back to Dashboard</a>
+  </div>
+</div>
+
+<div class="main-div container col-md-20">
+    <table class="table table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Ambulance Driver Name</th>
+          <th scope="col">Ambulance Driver Email Id</th>
+          <th scope="col">Ambulance Driver Contact No.</th>
+          <th scope="col">Ambulance Driver Location</th>
+          <th scope="col">Ambulance Status</th>
+          <th scope="col">Ambulance Type</th>
+          <th scope="col">Book Ambulance</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr *ngFor="let post of posts; let i = index">
+          <td scope="col">{{ i + 1 }}</td>
+          <td>{{ post.ambDriverName }}</td>
+          <td>{{ post.ambDriverEmailId }}</td>
+          <td>{{ post.ambDriverContactNumber }}</td>
+          <td>{{ post.ambDriverLocation }}</td>
+          <td>{{ post.ambStatus }}</td>
+          <td>{{ post.ambType }}</td>
+          <td>
+            <button type="button" class="btn btn-primary" (click)="bookAmbulance(post.ambulanceId, post.ambType)">Book this Ambulance</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

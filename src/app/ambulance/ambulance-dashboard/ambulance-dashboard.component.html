@@ -1,0 +1,68 @@
+<!-- <div class="dashboard-container"> -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="../../assets/images/logo.png" alt="Brand Logo" />
+    </div>
+    <div class="navbar-links">
+      <a routerLink="/" class="active">Home</a>
+      <a routerLink="/previousAmbulanceBookings">Previous Ambulance Bookings</a>
+      <a routerLink="/viewNearbyHospitals">View Nearby Hospitals</a>
+      <a routerLink="/updateAmbulanceDriverDetails">Update Ambulance Details</a>
+    </div>
+    <div class="logout">
+      <button (click)="logout()" class="btn btn-danger">Logout</button>
+    </div>
+  </div> 
+    
+      
+
+    <div class="body-section">
+      
+      <div class="cards">
+        <div class="card" (click)="goToPreviousBookings()">
+          <img src="../../../assets/images/booking_history.png" alt="Book Ambulance" />
+          <div class="card-text">Previous Bookings</div>
+        </div>
+        <div class="card" (click)="viewNearbyHospitals()">
+          <img src="../../../assets/images/book_ambulance.png" alt="Booking booking_history" />
+          <div class="card-text">View Nearby Hospitals</div>
+        </div>
+        <div class="card" (click)="goToUpdateDetails()">
+          <img src="../../../assets/images/update_details.png" alt="Book Ambulance" />
+          <div class="card-text">Update Ambulance Details</div>
+        </div>
+      </div>
+      
+      <!-- <div class="card-container">
+        <div class="card">
+          <img src="https://img.freepik.com/free-vector/happy-tourists-choosing-hotel-booking-room-online-flat-illustration_74855-10811.jpg" class="card-img-top" alt="Nearby Hospitals">
+          <div class="card-body">
+            <h5 class="card-title">Previous Bookings</h5>
+            <button class="btn btn-primary"><a routerLink="/previousAmbulanceBookings">Previous Booking</a></button>
+          </div>
+        </div>
+        <div class="card">
+            <img src="https://static.vecteezy.com/system/resources/previews/004/493/181/original/hospital-building-for-healthcare-background-illustration-with-ambulance-car-doctor-patient-nurses-and-medical-clinic-exterior-free-vector.jpg" class="card-img-top" alt="Nearby Hospitals">
+          <div class="card-body">
+            <h5 class="card-title">View Nearby Hospitals</h5>
+            <button class="btn btn-primary goButton"><a routerLink="/viewNearbyHospitals">View Nearby Hospital</a></button>
+          </div>
+          
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/premium-vector/software-update-illustration_108061-429.jpg?w=2000" class="card-img-top" alt="Nearby Hospitals">
+          <div class="card-body">
+            <h5 class="card-title">Update Details</h5>
+            <button class="btn btn-primary"><a routerLink="/updateAmbulanceDriverDetails">Update Details</a></button>
+          </div>
+          
+        </div>
+      </div>
+    </div> -->
+    
+    <footer class="footer">
+      <!-- Footer details -->
+      <p>&copy; 2023 Ambulance Booking System. All rights reserved.</p>
+    </footer>
+  <!-- </div> -->
+  
